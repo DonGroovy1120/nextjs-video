@@ -8,9 +8,9 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 import Icon from "@material-ui/core/Icon";
-
+import PropTypes from "prop-types";
 // @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
+import { Apps, CloudDownload, ArrowDropDownOutlined } from "@material-ui/icons";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
 
@@ -21,21 +21,107 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/nextjs-material-kit/components/headerLinksStyle.js";
 
 const useStyles = makeStyles(styles);
-
 export default function HeaderLinks(props) {
+  const {loginSuc} = props;
   const classes = useStyles();
+  if (loginSuc)
+    console.log("login success");
+  else
+    console.log("login Fail");
+
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
+        <Button
+            href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            BROWSE
+          </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          SEARCH
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          NEW
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem} >
+        <Button
+          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          CLASSES
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+         TEACHERS
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          SHOP
+        </Button>
+      </ListItem>
+      {
+        !loginSuc? (
+          <ListItem className={classes.listItem}>
+        <Button
+          href="/login"
+          color="transparent"
+          target="_blank"
+          visible="false"
+          className={classes.navLink}
+        >
+          Log in
+        </Button>
+      </ListItem>
+        ) : (
+          null//
+        )
+      }
+      
+      <ListItem className={classes.listItem}
+        color="blue"
+      >
         <CustomDropdown
           noLiPadding
           navDropdown
-          buttonText="Components"
+          buttonText="Sign UP"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
+            
           }}
-          buttonIcon={Apps}
+          // buttonIcon={ArrowDropDownOutlined}
           dropdownList={[
             <Link href="/components">
               <a className={classes.dropdownLink}>All components</a>
@@ -50,82 +136,9 @@ export default function HeaderLinks(props) {
           ]}
         />
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Icon className={classes.icons}>unarchive</Icon> Upgrade to PRO
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>*/}
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-instagram"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
     </List>
   );
+}
+HeaderLinks.propTypes = {
+  loginSuc: PropTypes.bool
 }

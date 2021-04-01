@@ -91,8 +91,8 @@ export default function CustomDropdown(props) {
           {...buttonProps}
           onClick={handleClick}
         >
-          {icon}
           {buttonText !== undefined ? buttonText : null}
+          {icon}
           {caret ? <b className={caretClasses} /> : null}
         </Button>
       </div>

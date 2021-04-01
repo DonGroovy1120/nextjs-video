@@ -4,18 +4,21 @@ const componentsStyle = {
   container,
   brand: {
     color: "#FFFFFF",
-    textAlign: "left"
+    textAlign: "center"
   },
   title: {
-    fontSize: "4.2rem",
+    fontSize: "3.2rem",
     fontWeight: "600",
+    letterSpacing:"2px",
     display: "inline-block",
     position: "relative"
   },
   subtitle: {
-    fontSize: "1.313rem",
-    maxWidth: "510px",
-    margin: "10px 0 0"
+    margin: "0px 0 0",
+    fontSize: "8rem",
+    maxWidth: "100%",
+    fontWeight: "800",
+    letterSpacing: "4px"
   },
   main: {
     background: "#FFFFFF",
