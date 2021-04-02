@@ -14,6 +14,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
+
 // sections for this page
 import SectionBasics from "pages-sections/Components-Sections/SectionBasics.js";
 import SectionNavbars from "pages-sections/Components-Sections/SectionNavbars.js";
@@ -30,6 +31,8 @@ import SectionDownload from "pages-sections/Components-Sections/SectionDownload.
 
 import styles from "assets/jss/nextjs-material-kit/pages/components.js";
 
+
+
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
@@ -38,24 +41,24 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="NextJS Material Kit"
-        rightLinks={<HeaderLinks />}
+        brand="JIVAMUKTI YOGA"
+        rightLinks={<HeaderLinks  />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "transparent"
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/nextjs_header.jpg")}>
+      <Parallax image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>NextJS Material Kit.</h1>
+                <h1 className={classes.title}>The Jivamukti Series</h1>
                 <h3 className={classes.subtitle}>
-                  A Badass Material Kit based on Material-UI and NextJS.
+                  Signature
                 </h3>
               </div>
             </GridItem>
@@ -73,17 +76,6 @@ export default function Components(props) {
         <SectionJavascript />
         <SectionCarousel />
         <SectionCompletedExamples />
-        <SectionLogin />
-        <GridItem md={12} className={classes.textCenter}>
-          <Link href="/login">
-            <a className={classes.link}>
-              <Button color="primary" size="lg" simple>
-                View Login Page
-              </Button>
-            </a>
-          </Link>
-        </GridItem>
-        <SectionExamples />
         <SectionDownload />
       </div>
       <Footer />

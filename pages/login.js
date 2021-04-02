@@ -37,8 +37,8 @@ export default function LoginPage(props) {
       <Header
         absolute
         color="transparent"
-        brand="NextJS Material Kit"
-        rightLinks={<HeaderLinks />}
+        brand="JIVAMUKTI YOGA"
+        rightLinks={<HeaderLinks loginSuc/>}
         {...rest}
       />
       <div
