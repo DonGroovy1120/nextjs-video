@@ -50,15 +50,24 @@ import work3 from "assets/img/examples/cynthia-del-rio.jpg";
 import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
-import { cardTitle, cardLink, cardSubtitle } from "assets/jss/nextjs-material-kit.js";
+import { cardTitle, cardLink, cardSubtitle, primaryColor } from "assets/jss/nextjs-material-kit.js";
 
 const useStyles = makeStyles(imgStyles);
+
+const additionalStyles = makeStyles(theme => ({
+  startButton: {
+    borderColor: primaryColor,
+    backgroundColor: '#fff',
+    border: '2px solid'
+  }
+}))
 
 const styles = {
   ...useStyles,
   cardTitle,
   cardLink,
-  cardSubtitle
+  cardSubtitle,
+  ...additionalStyles
 };
 
 export default function Components(props) {
@@ -70,6 +79,108 @@ export default function Components(props) {
       classes.imgFluid
     );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
+
+  const recentItems = [
+    {
+      title: 'EASY',
+      description: 'Well, the first step is to understand yoga.',
+      categories: '​Bhakti Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1536007164800-b7f11331f35c?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + EASY',
+      description: ' The real yoga. The true, traditional, life-changing yoga that has been studied and practiced for thousands of years.',
+      categories: 'Gnana Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1522845015757-50bce044e5da?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + NORMAL',
+      description: 'There is a lot of misinformation out there, especially with the rise of yoga stars and gym-style yoga classes.',
+      categories: 'Karma Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1543604055-dede4512686d?ixlib=rb-1.2.1&ixid=MXwxMjA3[…]8ODZ8fHlvZ2F8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + HARD',
+      description: 'And hey, that’s okay. We are totally supportive of everyone trying to get in on this yoga action.',
+      categories: ' Kriya Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1603987835113-841f232f6f70?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + EASY',
+      description: 'But we also want you to know what true yoga is about, the different types of yoga, and the branded styles that you might find on your favorite yoga studio class schedule.',
+      categories: 'Tantra Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1529693662653-9d480530a697?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENLTE + EASY',
+      description: 'That’s why we’ve created this ultimate guide to the types of yoga for you.',
+      categories: 'Kundalini Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1579454563399-9da67b065830?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + HARD',
+      description: 'So that when you choose a style of yoga for your practice, yoga teacher training program, or anything else, ',
+      categories: 'Iyengar Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1518310952931-b1de897abd40?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + NORMAL',
+      description: 'anything else, you are choosing one based on the ancient wisdom that yoga has to offer',
+      categories: 'Vinyasa Yoga',
+      imageUrl: 'https://images.unsplash.com/flagged/photo-1573556278922-ad9a1914c801?ixid=MXwxMjA3fDB8[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+  ]
+
+  const hottestItems = [
+    {
+      title: 'EASY',
+      description: 'Well, the first step is to understand yoga.',
+      categories: '​Bhakti Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1535007829477-d13662ffb714?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + EASY',
+      description: ' The real yoga. The true, traditional, life-changing yoga that has been studied .',
+      categories: 'Gnana Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixid=MXwxMjA3fDB8MHxzZWFyY2h[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + NORMAL',
+      description: 'There is a lot of misinformation out there, especially with the rise of yoga stars and gym-style yoga classes.',
+      categories: 'Karma Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1588783344727-f67e17b45dfc?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + HARD',
+      description: 'And hey, that’s okay. We are totally supportive of everyone trying to get in on this yoga action.',
+      categories: ' Kriya Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1573384666979-2b1e160d2d08?ixlib=rb-1.2.1&ixid=MXwxM[…]8NDB8fHlvZ2F8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + EASY',
+      description: 'But we also want you to know what true yoga is about, the different types of yoga.',
+      categories: 'Tantra Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1602192509154-0b900ee1f851?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENLTE + EASY',
+      description: 'That’s why we’ve created this ultimate guide to the types of yoga for you.',
+      categories: 'Kundalini Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1485727749690-d091e8284ef3?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + HARD',
+      description: 'So that when you choose a style of yoga for your practice, yoga teacher training anything else, ',
+      categories: 'Iyengar Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1552196527-bffef41ef674?ixid=MXwxMjA3fDB8MHxzZWFyY2h[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+    {
+      title: 'GENTLE + NORMAL',
+      description: 'anything else, you are choosing one based on the ancient wisdom that yoga has to offer',
+      categories: 'Vinyasa Yoga',
+      imageUrl: 'https://images.unsplash.com/photo-1510024161681-8a1f66ed1a25?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    },
+  ]
 
   const { ...rest } = props;
   return (
@@ -114,7 +225,7 @@ export default function Components(props) {
           </GridItem>
           <GridItem xs={8} sm={6} md={6} lg={7}>
             <Card>
-              <img className={classes.imgCard} src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80" alt="Card-img" />
+              <img className={classes.imgCard} src="https://images.unsplash.com/photo-1611095966422-50a79dd5313b?ixid=MXwxMjA3fDF8MHxlZGl0[…]fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
               <div className={classes.imgCardOverlay}>
                 <h4 className={classes.h3Font}>GENTLE + EASY</h4>
                 <p  className={classes.cardBody}>LESSON 1</p>
@@ -123,139 +234,53 @@ export default function Components(props) {
             </Card>
           </GridItem>
         </GridContainer >
+        <h3 style={{color: primaryColor, textAlign: 'center', fontWeight: 'bold', marginTop: 0}}>Recent</h3>
         <div className={classNames(classes.mainRaised)}>
           <GridContainer className={classNames(classes.gridContainer)}>
-            <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
-              <Card style={{width: "auto"}}>
-                <img
-                  style={{height: "180px", width: "100%", display: "block"}}
-                  className={classes.imgCardTop}
-                  src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
-                  alt="Card-img-cap"
-                />
-                <CardBody>
-                  <h4 className={classes.h3Font}>GENTLE + EASY</h4>
-                  <p className={classes.cardBody}> labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-                  <p  className={classes.cardBody}>LESSON 1</p>
-                  <Button color="primary">START </Button>
-                </CardBody>
-              </Card>
-            </GridItem>
-             <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
+            {recentItems.map(item => (
+              <GridItem xs={1} sm={2} md={3} lg={4}  className={classes.gridItem}>
                 <Card style={{width: "auto"}}>
                   <img
                     style={{height: "180px", width: "100%", display: "block"}}
                     className={classes.imgCardTop}
-                    src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                    src={item.imageUrl}
                     alt="Card-img-cap"
                   />
                   <CardBody>
-                    <h4 className={classes.h3Font}>GENTLE + EASY1</h4>
-                    <p className={classes.cardBody}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu f </p>
-                    <p className={classes.cardBody}>LESSON 1 </p>
+                    <h4 className={classes.h3Font}>{item.title}</h4>
+                    <p className={classes.cardBody} style={{maxHeight: '48px', overflow: 'hidden'}}>{item.description}</p>
+                    <p  className={classes.cardBody}>{item.categories}</p>
+                    <Button color="primary" variant="outlined" fullWidth style={{color: primaryColor, backgroundColor: '#fff', border: '2px solid ' + primaryColor}}>Start Lesson</Button>
+                  </CardBody>
+                </Card>
+              </GridItem>
+            ))}
+          </GridContainer>
+        </div>
 
-                    <Button color="primary">START </Button>
-                  </CardBody>
-                </Card>
-              </GridItem>
-             <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
+        <h3 style={{color: primaryColor, textAlign: 'center', fontWeight: 'bold'}}>Hottest</h3>
+        <div className={classNames(classes.mainRaised)}>
+          <GridContainer className={classNames(classes.gridContainer)}>
+            {hottestItems.map(item => (
+              <GridItem xs={1} sm={2} md={3} lg={4}  className={classes.gridItem}>
                 <Card style={{width: "auto"}}>
                   <img
                     style={{height: "180px", width: "100%", display: "block"}}
                     className={classes.imgCardTop}
-                    src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                    src={item.imageUrl}
                     alt="Card-img-cap"
                   />
                   <CardBody>
-                    <h4 className={classes.h3Font}>GENTLE + EASY2</h4>
-                    <p className={classes.cardBody}>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa </p>
-                    <p className={classes.cardBody}>LESSON 1 </p>
-                    <Button color="primary">START </Button>
+                    <h4 className={classes.h3Font}>{item.title}</h4>
+                    <p className={classes.cardBody} style={{maxHeight: '48px', overflow: 'hidden'}}>{item.description}</p>
+                    <p  className={classes.cardBody}>{item.categories}</p>
+                    <Button color="primary" variant="outlined" fullWidth style={{color: primaryColor, backgroundColor: '#fff', border: '2px solid ' + primaryColor}}>Start Lesson</Button>
                   </CardBody>
                 </Card>
               </GridItem>
-            <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
-               <Card style={{width: "auto"}}>
-                 <img
-                   style={{height: "180px", width: "100%", display: "block"}}
-                   className={classes.imgCardTop}
-                   src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
-                   alt="Card-img-cap"
-                 />
-                 <CardBody>
-                   <h4 className={classes.h3Font}>GENTLE + EASY3</h4>
-                   <p className={classes.cardBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
-                   <p className={classes.cardBody}>LESSON 1 </p>
-                   <Button color="primary">START </Button>
-                 </CardBody>
-               </Card>
-             </GridItem>
-            <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
-              <Card style={{width: "auto"}}>
-                <img
-                  style={{height: "180px", width: "100%", display: "block"}}
-                  className={classes.imgCardTop}
-                  src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
-                  alt="Card-img-cap"
-                />
-                <CardBody>
-                  <h4 className={classes.h3Font}>GENTLE + EASY4</h4>
-                  <p className={classes.cardBody}> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons</p>
-                  <p className={classes.cardBody}>LESSON 1 </p>
-                  <Button color="primary">START </Button>
-                </CardBody>
-              </Card>
-            </GridItem>
-             <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
-                <Card style={{width: "auto"}}>
-                  <img
-                    style={{height: "180px", width: "100%", display: "block"}}
-                    className={classes.imgCardTop}
-                    src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
-                    alt="Card-img-cap"
-                  />
-                  <CardBody>
-                    <h4 className={classes.h3Font}>GENTLE + EASY5</h4>
-                    <p className={classes.cardBody}>ore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt </p>
-                    <p className={classes.cardBody}>LESSON 1 </p>
-                    <Button color="primary">START </Button>
-                  </CardBody>
-                </Card>
-              </GridItem>
-             <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
-                <Card style={{width: "auto"}}>
-                  <img
-                    style={{height: "180px", width: "100%", display: "block"}}
-                    className={classes.imgCardTop}
-                    src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
-                    alt="Card-img-cap"
-                  />
-                  <CardBody>
-                    <h4 className={classes.h3Font}>GENTLE + EASY6</h4>
-                    <p className={classes.cardBody}>um dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi </p>
-                    <p className={classes.cardBody}>LESSON 1 </p>
-                    <Button color="primary">START </Button>
-                  </CardBody>
-                </Card>
-              </GridItem>
-            <GridItem xs={3} sm={3} md={3} lg={3}  className={classes.gridItem}>
-               <Card style={{width: "auto"}}>
-                 <img
-                   style={{height: "180px", width: "100%", display: "block"}}
-                   className={classes.imgCardTop}
-                   src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
-                   alt="Card-img-cap"
-                 />
-                 <CardBody>
-                   <h4 className={classes.h3Font}>GENTLE + EASY7</h4>
-                   <p className={classes.cardBody}> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </p>
-                   <p className={classes.cardBody}>LESSON 1 </p>
-                   <Button color="primary">START </Button>
-                 </CardBody>
-               </Card>
-             </GridItem>
-            </GridContainer>
-          </div>
+            ))}
+          </GridContainer>
+        </div>
       </div>
       <Footer />
     </div>
