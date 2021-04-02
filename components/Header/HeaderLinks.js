@@ -33,9 +33,8 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
         <Button
-            href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
+            href="/browse"
             color="transparent"
-            target="_blank"
             className={classes.navLink}
           >
             BROWSE
@@ -43,9 +42,8 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
+          href=""
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           SEARCH
@@ -53,29 +51,18 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
+          href="/newclasses"
           color="transparent"
           target="_blank"
           className={classes.navLink}
         >
-          NEW
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem} >
-        <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          CLASSES
+          NEW CLASSES
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
+          href="/teachers"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
          TEACHERS
@@ -83,9 +70,8 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
+          href="/shop"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           SHOP

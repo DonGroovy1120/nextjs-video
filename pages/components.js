@@ -13,8 +13,12 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
+import Timeline from "@material-ui/icons/Timeline";
+import InfoArea from "components/InfoArea/InfoArea.js";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
 import Parallax from "components/Parallax/Parallax.js";
-
+import Clearfix from "components/Clearfix/Clearfix.js";
 // sections for this page
 import SectionBasics from "pages-sections/Components-Sections/SectionBasics.js";
 import SectionNavbars from "pages-sections/Components-Sections/SectionNavbars.js";
@@ -30,8 +34,13 @@ import SectionExamples from "pages-sections/Components-Sections/SectionExamples.
 import SectionDownload from "pages-sections/Components-Sections/SectionDownload.js";
 
 import styles from "assets/jss/nextjs-material-kit/pages/components.js";
+import gridstyles from "assets/jss/nextjs-material-kit/pages/components.js";
 
-
+import cardBlog5 from "assets/img/profile-bg.jpg";
+import Subject from "@material-ui/icons/Subject";
+import Icon from "@material-ui/core/Icon";
+import Delete from "@material-ui/core/Icon";
+import CardFooter from "../components/Card/CardFooter";
 
 const useStyles = makeStyles(styles);
 
@@ -42,41 +51,203 @@ export default function Components(props) {
     <div>
       <Header
         brand="JIVAMUKTI YOGA"
-        rightLinks={<HeaderLinks  />}
+        rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 400,
-          color: "transparent"
+          color: "success"
         }}
         {...rest}
       />
+      <Clearfix/>
       <Parallax image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem>
-              <div className={classes.brand}>
-                <h1 className={classes.title}>The Jivamukti Series</h1>
+              <GridItem>
+                <div className={classes.brand}>
+                  <h2 className={classes.subtitle}>The Jivamukti Series.</h2>
+                  <h1 className={classes.title}>
+                    Signature
+                  </h1>
+                </div>
+              </GridItem>
+            </GridContainer>
+        </div>
+      </Parallax>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classNames(classes.alignSelfCenter)} >
+          <GridContainer
+              className={classNames(classes.container)}
+          >
+            <GridItem xs={4} sm={6} md={6} lg={6}
+               className={classNames(classes.alignSelfCenter)}
+            >
                 <h3 className={classes.subtitle}>
-                  Signature
+                    PRACTICE WITH THE MASTERS
                 </h3>
-              </div>
+                <h4>
+                    STASANG WITH THE FOUNDERS, AS WELL AS CLASSIC, TRIBLE adafaf, AND RETREAT MASTER CLASSES!
+                </h4>
+            </GridItem>
+            <GridItem xs={8} sm={6} md={6} lg={6}>
+              <Card>
+                  <img style={{ height: "180px", width: "100%", display: "block" }}
+                       className={classes.imgCardTop}
+                       src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                       alt="Card-img-cap"
+                  />
+                  <Button className={classes.buttonFont}
+                      color="rose"
+                  >
+                      START PRACTICE
+                  </Button>
+              </Card>
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax>
+          <div className={classNames(classes.container)}>
+              <GridContainer className = {classNames(classes.gridTheme)}>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classNames(classes.imgCardTop,classes.cateTitle)} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
 
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavascript />
-        <SectionCarousel />
-        <SectionCompletedExamples />
-        <SectionDownload />
+                      <CardBody className = {classNames(classes.cardTile)}>
+                          <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                          <p>
+                                1 LESSON
+                          </p>
+                      </CardBody>
+                      </Card>
+                  </GridItem>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classes.imgCardTop} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
+                          <CardBody className = {classNames(classes.cardTile)}>
+                              <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                              <p>
+                                  1 LESSON
+                              </p>
+                          </CardBody>
+                      </Card>
+                  </GridItem>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classes.imgCardTop} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
+                          <CardBody className = {classNames(classes.cardTile)}>
+                              <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                              <p>
+                                  1 LESSON
+                              </p>
+                          </CardBody>
+                      </Card>
+                  </GridItem>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classNames(classes.imgCardTop,classes.cateTitle)} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
+
+                          <CardBody className = {classNames(classes.cardTile)}>
+                              <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                              <p>
+                                  1 LESSON
+                              </p>
+                          </CardBody>
+                      </Card>
+                  </GridItem>
+              </GridContainer>
+              <GridContainer className={classNames(classes.gridTheme)}>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classNames(classes.imgCardTop,classes.cateTitle)} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
+
+                          <CardBody className = {classNames(classes.cardTile)}>
+                              <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                              <p>
+                                  1 LESSON
+                              </p>
+                          </CardBody>
+                      </Card>
+                  </GridItem>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classNames(classes.imgCardTop,classes.cateTitle)} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
+
+                          <CardBody className = {classNames(classes.cardTile)}>
+                              <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                              <p>
+                                  1 LESSON
+                              </p>
+                          </CardBody>
+                      </Card>
+                  </GridItem>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classNames(classes.imgCardTop,classes.cateTitle)} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
+
+                          <CardBody className = {classNames(classes.cardTile)}>
+                              <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                              <p>
+                                  1 LESSON
+                              </p>
+                          </CardBody>
+                      </Card>
+                  </GridItem>
+                  <GridItem xs={3} sm={3} md={3} lg={3}>
+                      <Card className={classNames(classes.imgCardTop,classes.cateTitle)} >
+                          <img style={{ height: "180px", width: "100%", display: "block" }}
+                               className={classes.imgCardTop}
+                               src="https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80"
+                               alt="Card-img-cap"
+                          />
+
+                          <CardBody className = {classNames(classes.cardTile)}>
+                              <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
+                              <p>
+                                  1 LESSON
+                              </p>
+                          </CardBody>
+                      </Card>
+                  </GridItem>
+              </GridContainer>
+          </div>
+        {/*<SectionBasics />*/}
+        {/*<SectionNavbars />*/}
+        {/*<SectionTabs />*/}
+        {/*<SectionPills />*/}
+        {/*<SectionNotifications />*/}
+        {/*<SectionTypography />*/}
+        {/*<SectionJavascript />*/}
+        {/*<SectionCompletedExamples />*/}
+        {/*<SectionDownload />*/}
+
       </div>
       <Footer />
     </div>

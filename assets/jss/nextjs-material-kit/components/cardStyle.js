@@ -4,7 +4,7 @@ const cardStyle = {
     marginBottom: "30px",
     marginTop: "30px",
     borderRadius: "6px",
-    color: "rgba(0, 0, 0, 0.87)",
+    color: "#ffffff",
     background: "#fff",
     width: "100%",
     boxShadow:
