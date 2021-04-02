@@ -7,23 +7,31 @@ const componentsStyle = {
     textAlign: "center"
   },
   title: {
-    fontSize: "3.2rem",
+    fontSize: "9.2rem",
     fontWeight: "600",
-    letterSpacing:"2px",
+    letterSpacing:"5px",
     display: "inline-block",
     position: "relative"
   },
   subtitle: {
     margin: "0px 0 0",
-    fontSize: "8rem",
+    fontSize: "rem",
     maxWidth: "100%",
-    fontWeight: "800",
-    letterSpacing: "4px"
+    fontWeight: "400",
+    letterSpacing: "4px",
+    marginTop: "30px",
+    fontFamily: "Roboto Slab, Times New Roman, serif",
   },
   main: {
-    background: "#FFFFFF",
+    background: "#eee",
     position: "relative",
     zIndex: "3"
+  },
+  gridContainer: {
+    background: "#eee",
+    position: "relative",
+    zIndex: "3",
+    alignSelf:"center"
   },
   mainRaised: {
     margin: "-60px 30px 0px",
@@ -40,7 +48,27 @@ const componentsStyle = {
   },
   textCenter: {
     textAlign: "center"
+  },
+  alignSelfCenter: {
+    alignSelf: "center"
+  },
+  buttonFont: {
+    fontSize: "1.456rem"
+  },
+  gridTheme: {
+    backgroundColor:"#343434",
+    background:"radial-gradient(ellipse at center,#585858 0,#232323 100%)",
+    width:"-webkit-fill-available"
+  },
+  imgCardTop:{
+    borderRadius: "10px",
+    background:"transparent"
+  },
+  cateTitle:{
+    color:"0xFFFFFF",
+    textWeight:"400"
   }
+
 };
 
 export default componentsStyle;

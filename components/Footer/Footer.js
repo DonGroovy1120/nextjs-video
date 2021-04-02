@@ -5,8 +5,17 @@ import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // material-ui core components
-import { List, ListItem } from "@material-ui/core";
+import { List, ListItem, Grid} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "components/CustomButtons/Button.js";
+import Icon from "@material-ui/core/Icon";
+import { PhoneIphone, CloudDownload ,Twitter} from "@material-ui/icons";
+import CustomInput from 'components/CustomInput/CustomInput.js';
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import InputAdornment from "@material-ui/core/InputAdornment";
+// @material-ui icons
+import People from '@material-ui/icons/People';
 
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
@@ -29,63 +38,96 @@ export default function Footer(props) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/?ref=njsmk-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Creative Tim
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation?ref=njsmk-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/?ref=njsmk-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/license?ref=njsmk-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
-              </a>
-            </ListItem>
-          </List>
-        </div>
-        <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=njsmk-footer"
-            className={aClasses}
-            target="_blank"
+        <div >
+          <p className={classes.h4font}>
+            ABAILABLE ON MUTIPLE DEVICE VIEW ALL ;)
+          </p>
+          <Button className={classNames(classes.footerLinkButton)}
+              size={"sm"}
+              color="primary"
           >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+            <i
+            className={"fab fa-apple"}
+            />
+            iPhone
+          </Button>
+          <Button className={classNames(classes.footerLinkButton)}
+            size={"sm"}
+            color="primary"
+          >
+            <i
+                className={"fab fa-android"}
+            />
+            android
+          </Button>
+          <div>
+            <p className = {classes.h2font}> $16 A MONTH or $160 A YEAR </p>
+          </div>
         </div>
-      </div>
+        <div className = {classes.subFooter}>
+          <div >
+            <GridContainer>
+              <GridItem xs={4} sm={6} md={6} lg={5}>
+                <div className={classNames(classes.left)}>
+                  <Button className={classNames(classes.footerButton)}
+                  >
+                      JIVAMUKTI YOURGA
+                  </Button>
+                </div>
+              </GridItem>
+              <GridItem xs={8} sm={6} md={6} lg={7}>
+              <div  className={classNames(classes.right)}>
+                <Button className={classNames(classes.footerButton)}
+                >
+                    FOUNDERS
+                </Button>
+                <Button className={classNames(classes.footerButton)}
+                >
+                    OPEN CLASSES
+                </Button>
+              </div>
+              </GridItem>
+            </GridContainer>
+          </div>
+          <div >
+            <p className = {classes.h4font}
+            >
+              AN EXPENSIVE LIBRARY OF CLASSES,
+            </p>
+            <p className = {classes.h4font}
+            >
+              MEDITATIONS, WORKSHOPS, AND MORE!
+            </p>
+            <p className = {classes.h4font}
+            >
+              NEW CLASSES EACH WEEK, EVERYTHING
+            </p>
+            <p className = {classes.h4font}>
+              YOU NEED FOR YOUR YOGA PRACTICE!
+            </p>
+          </div>
+          <div >
+            <h5  className = {classes.h5font}>
+              SCROLL DOWN TO PREVIEW SOME OF OUR FAVORITE SELECTION OF THE MOMENT.
+            </h5>
+            <div className = {classes.footBottom} >
+              <CustomInput
+                labelText="Please enter an email address Subscribe"
+                id="material"
+                formControlProps={{
+                  fullWidth: true
+                }}
+                inputProps={{
+                  endAdornment: (<InputAdornment position="end"><People/></InputAdornment>)
+                }}
+              />
+            </div>
+          </div>
+          </div>
+        </div>
     </footer>
   );
 }
-
 Footer.propTypes = {
   whiteFont: PropTypes.bool
 };

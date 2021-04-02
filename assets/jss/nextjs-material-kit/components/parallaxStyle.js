@@ -12,6 +12,19 @@ const parallaxStyle = theme => ({
     display: "flex",
     alignItems: "center"
   },
+  miniParallax: {
+    height: "30vh",
+    maxHeight: "1000px",
+    overflow: "hidden",
+    position: "relative",
+    backgroundPosition: "center top",
+    backgroundSize: "cover",
+    margin: "0",
+    padding: "0",
+    border: "0",
+    display: "flex",
+    alignItems: "center"
+  },
   filter: {
     "&:before": {
       background: "rgba(0, 0, 0, 0.5)"
@@ -28,11 +41,11 @@ const parallaxStyle = theme => ({
     }
   },
   small: {
-    height: "380px"
+    height: "30vh"
   },
   parallaxResponsive: {
     [theme.breakpoints.down("md")]: {
-      minHeight: "660px"
+      minHeight: "40px"
     }
   }
 });

@@ -86,7 +86,7 @@ const headerStyle = {
     )}`
   },
   success: {
-    backgroundColor: successColor,
+    backgroundColor: "#00acc1",
     color: "#FFFFFF",
     boxShadow: `0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px ${hexToRGBAlpha(
       successColor,
