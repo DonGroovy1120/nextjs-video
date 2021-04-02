@@ -25,6 +25,7 @@ export default function Card(props) {
     <div className={cardClasses} {...rest}>
       {children}
     </div>
+
   );
 }
 
