@@ -31,31 +31,42 @@ const footerStyle = {
     zIndex: "2",
     position: "relative",
     marginTop: "40px",
-    backgroundColor:"#343434"
+    backgroundColor:"#eee"
   },
   subFooter: {
     padding: "0.9375rem 0",
-    backgroundColor:"#343434",
+    backgroundColor:"#eee",
     width:"100%",
+    fontFamily: "Roboto Slab, Times New Roman, serif",
+    fontWeight: "700",
     marginTop:"20px"
   },
   h2font: {
     marginTop:"40px",
-    color: "#FFF",
     fontSize:"34px",
+    color: "#3c4858",
+    fontFamily: "Roboto Slab, Times New Roman, serif",
+    fontWeight: "700"
+
   },
   h3font: {
-    color: "#FFF",
+    color: "#3c4858",
+    fontFamily: "Roboto Slab, Times New Roman, serif",
     fontSize: "26px",
+    fontWeight: "700",
     backgroundColor: "transparent"
   },
   h4font: {
-    color: "#FFFFFF",
+    color: "#3c4858",
+    fontFamily: "Roboto Slab, Times New Roman, serif",
     fontSize: "18px",
+    fontWeight: "700",
     marginTop:"20px"
   },
   h5font: {
-    color: "#FFFFFF",
+    color: "#3c4858",
+    fontFamily: "Roboto Slab, Times New Roman, serif",
+    fontWeight: "700",
     fontSize:"13px" ,
     marginTop:"15px"
   },
@@ -77,7 +88,6 @@ const footerStyle = {
     fontSize:"30px"
   },
   footerButton:{
-    backgroundColor:"transparent",
     marginLeft: "10px",
     marginRight: "10px"
   },

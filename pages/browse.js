@@ -34,7 +34,6 @@ import SectionExamples from "pages-sections/Components-Sections/SectionExamples.
 import SectionDownload from "pages-sections/Components-Sections/SectionDownload.js";
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import styles from "assets/jss/nextjs-material-kit/pages/browse.js";
-import gridstyles from "assets/jss/nextjs-material-kit/pages/components.js";
 
 import cardBlog5 from "assets/img/profile-bg.jpg";
 import Subject from "@material-ui/icons/Subject";
@@ -67,18 +66,21 @@ export default function BrowsePage(props) {
         >
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)} >
-          <div className={classNames(classes.main)}>
+          <div>
             <GridContainer
                 className={classNames(classNames(classes.main, classes.gridContainer))}
             >
               <GridItem xs={4} sm={6} md={6} lg={6}
+
                         className={classNames(classes.alignTop)}
               >
                 <Button className={classNames(classes.buttonSpace)}
+                  color="success"
                 >
                   SUBSCRIBE
                 </Button>
                 <Button className={classNames(classes.buttonSpace)}
+                        color="success"
                 >
                   <i
                       className={"fab fa-download"}
@@ -95,8 +97,11 @@ export default function BrowsePage(props) {
                   />
 
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -105,27 +110,26 @@ export default function BrowsePage(props) {
             </GridContainer>
           </div>
           <div className={classNames(classes.gridContainer)}>
-            <CustomDropdown className={classNames(classes.sortButton)}
-                buttonText="Sort by..."
-                buttonProps={{
-                  className: classes.navLink,
-                  color: "transparent"
-                }}
-                dropdownList={[
-                  <Link href="/components">
-                    <a className={classes.dropdownLink}>Name</a>
-                  </Link>,
-                  <a
-                      href="https://creativetimofficial.github.io/nextjs-material-kit/#/documentation?ref=njsmk-navbar"
-                      target="_blank"
-                      className={classes.dropdownLink}
-                  >
-                    Date
-                  </a>
-                ]}
-            />
-
-            <GridContainer className = {classNames(classes.gridTheme)}>
+            {/*<CustomDropdown className={classNames(classes.sortButton)}*/}
+            {/*    buttonText="Sort by..."*/}
+            {/*    buttonProps={{*/}
+            {/*      className: classes.navLink,*/}
+            {/*      color: "rose"*/}
+            {/*    }}*/}
+            {/*    dropdownList={[*/}
+            {/*      <Link href="/components">*/}
+            {/*        <a className={classes.dropdownLink}>Name</a>*/}
+            {/*      </Link>,*/}
+            {/*      <a*/}
+            {/*          href="https://creativetimofficial.github.io/nextjs-material-kit/#/documentation?ref=njsmk-navbar"*/}
+            {/*          target="_blank"*/}
+            {/*          className={classes.dropdownLink}*/}
+            {/*      >*/}
+            {/*        Date*/}
+            {/*      </a>*/}
+            {/*    ]}*/}
+            {/*/>*/}
+            <GridContainer>
               <GridItem xs={3} sm={3} md={3} lg={3}>
                 <Card className={classNames(classes.imgCardTop,classes.cateTitle)} >
                   <img style={{ height: "180px", width: "100%", display: "block" }}
@@ -135,8 +139,11 @@ export default function BrowsePage(props) {
                   />
 
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -150,8 +157,11 @@ export default function BrowsePage(props) {
                        alt="Card-img-cap"
                   />
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -165,8 +175,11 @@ export default function BrowsePage(props) {
                        alt="Card-img-cap"
                   />
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -181,8 +194,11 @@ export default function BrowsePage(props) {
                   />
 
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -199,8 +215,11 @@ export default function BrowsePage(props) {
                   />
 
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -215,8 +234,11 @@ export default function BrowsePage(props) {
                   />
 
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -231,8 +253,11 @@ export default function BrowsePage(props) {
                   />
 
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>
@@ -247,8 +272,11 @@ export default function BrowsePage(props) {
                   />
 
                   <CardBody className = {classNames(classes.cardTile)}>
-                    <h4 className={classes.cardTitle}>INTER MEDEDITE 1</h4>
-                    <p>
+                    <h4 className={classes.h3Font}>INTER MEDEDITE 1</h4>
+                    <p className={classes.cardBody}>
+                      ididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <p className={classes.cardBody}>
                       1 LESSON
                     </p>
                   </CardBody>

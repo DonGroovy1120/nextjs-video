@@ -44,7 +44,7 @@ export default function Footer(props) {
           </p>
           <Button className={classNames(classes.footerLinkButton)}
               size={"sm"}
-              color="primary"
+              color="rose"
           >
             <i
             className={"fab fa-apple"}
@@ -53,7 +53,7 @@ export default function Footer(props) {
           </Button>
           <Button className={classNames(classes.footerLinkButton)}
             size={"sm"}
-            color="primary"
+            color="rose"
           >
             <i
                 className={"fab fa-android"}
@@ -70,6 +70,8 @@ export default function Footer(props) {
               <GridItem xs={4} sm={6} md={6} lg={5}>
                 <div className={classNames(classes.left)}>
                   <Button className={classNames(classes.footerButton)}
+                          color="primary"
+
                   >
                       JIVAMUKTI YOURGA
                   </Button>
@@ -78,10 +80,13 @@ export default function Footer(props) {
               <GridItem xs={8} sm={6} md={6} lg={7}>
               <div  className={classNames(classes.right)}>
                 <Button className={classNames(classes.footerButton)}
+                        color="info"
                 >
                     FOUNDERS
                 </Button>
                 <Button className={classNames(classes.footerButton)}
+                        color="success"
+
                 >
                     OPEN CLASSES
                 </Button>
