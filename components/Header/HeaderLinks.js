@@ -53,7 +53,6 @@ export default function HeaderLinks(props) {
         <Button
           href="/newclasses"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           NEW CLASSES
@@ -61,7 +60,7 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="/teachers"
+          href="/techer"
           color="transparent"
           className={classes.navLink}
         >
@@ -83,7 +82,6 @@ export default function HeaderLinks(props) {
         <Button
           href="/login"
           color="transparent"
-          target="_blank"
           visible="false"
           className={classes.navLink}
         >
